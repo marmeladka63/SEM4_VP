@@ -4,28 +4,21 @@ Console.Clear();
 
 Console.Write("Введите число ");
 
-Console.WriteLine(kols(int.Parse(Console.ReadLine())));
+int M = int.Parse(Console.ReadLine());
 
-if ( kols>0)
-{
-   int M=kols;
-}
-else 
-{
-    Console.WriteLine("Введите положительное число");
-}
 
-int M( int number)
+Console.WriteLine($"Количество цифр в числе: {count( M)}");
+
+
+int count( int M)
 {
-    int kol=1;
-    int b= M/10; 
-    if ( b>0)
+    int i=0;
+    
+    while (M>0)
     {
-      kol++;
-      b=b/10;
-
-
+      M/=10;
+      i++;
 
     }
-    return b;
+    return i;
 }
